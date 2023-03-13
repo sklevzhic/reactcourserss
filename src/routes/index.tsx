@@ -1,5 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 import MainPage from '../pages/main';
+import Header from '../components/header';
 
 export const routes: RouteObject[] = [
   {
@@ -8,10 +9,20 @@ export const routes: RouteObject[] = [
   },
   {
     path: '/about',
-    element: <div>about</div>,
+    element: (
+      <div>
+        <Header />
+        about
+      </div>
+    ),
   },
   {
     path: '*',
-    element: <div>404</div>,
+    element: (
+      <div>
+        <Header />
+        404
+      </div>
+    ),
   },
 ];

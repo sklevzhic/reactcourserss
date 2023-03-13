@@ -1,13 +1,19 @@
 import './index.css';
 
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
-interface SearchBarProps {}
+interface SearchBarProps {
+  value: string;
+  handleValue: (v: string) => void;
+}
 
 interface SearchBarState {}
 
 class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
-  state = {};
+  handleValueInput = (e: ChangeEvent<HTMLInputElement>) => {
+    this.props.handleValue(e.target.value);
+  };
+
   render() {
     return (
       <>
@@ -17,8 +23,8 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
               className={'chat-input-field'}
               placeholder={'Some text'}
               type="text"
-              value={''}
-              onChange={() => {}}
+              value={this.props.value}
+              onChange={this.handleValueInput}
             />
             <button className={'chat-input-button button'}>Search</button>
           </div>
