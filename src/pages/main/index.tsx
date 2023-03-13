@@ -1,6 +1,8 @@
 import React from 'react';
+import CardList from '../../components/card-list';
 import Header from '../../components/header';
 import SearchBar from '../../components/search-bar';
+import { data } from '../../data';
 
 interface MainPageInterface {
   value: string;
@@ -31,6 +33,7 @@ class MainPage extends React.Component<{}, MainPageInterface> {
       <div className={'container'}>
         <Header />
         <SearchBar value={this.state.value} handleValue={this.handleValue} />
+        <CardList list={data} />
       </div>
     );
   }
