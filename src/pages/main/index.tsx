@@ -8,31 +8,32 @@ interface MainPageInterface {
   value: string;
 }
 
-class MainPage extends React.Component<{}, MainPageInterface> {
+class MainPage extends React.Component<Record<string, never>, MainPageInterface> {
   state = {
     value: '',
   };
-  componentWillMount() {
+
+  componentDidMount() {
     const valueData = localStorage.getItem('searchValue');
-    const valueFromLS = valueData ? valueData : '';
-    console.log(valueFromLS);
+    const valueFromLS = valueData || '';
     this.setState({ value: valueFromLS });
+  }
+
+  componentWillUnmount() {
+    const { value } = this.state;
+    localStorage.setItem('searchValue', value);
   }
 
   handleValue = (v: string) => {
     this.setState({ value: v });
   };
 
-  componentWillUnmount() {
-    localStorage.setItem('searchValue', this.state.value);
-  }
-
   render() {
-    console.log('render');
+    const { value } = this.state;
     return (
-      <div className={'container'}>
+      <div className='container'>
         <Header />
-        <SearchBar value={this.state.value} handleValue={this.handleValue} />
+        <SearchBar value={value} handleValue={this.handleValue} />
         <CardList list={data} />
       </div>
     );

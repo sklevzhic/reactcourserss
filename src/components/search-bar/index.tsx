@@ -7,9 +7,7 @@ interface SearchBarProps {
   handleValue: (v: string) => void;
 }
 
-interface SearchBarState {}
-
-class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
+class SearchBar extends React.Component<SearchBarProps> {
   handleValueInput = (e: ChangeEvent<HTMLInputElement>) => {
     this.props.handleValue(e.target.value);
   };

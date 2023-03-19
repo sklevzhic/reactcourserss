@@ -1,6 +1,9 @@
 {
     "parser": "@typescript-eslint/parser",
     "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "airbnb/hooks",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier",
@@ -15,9 +18,7 @@
     },
     "root": true,
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
+        "project": "./tsconfig.json",
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
@@ -40,7 +41,12 @@
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-var-reqiures": "off",
         "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/state-in-constructor": "off",
+        "import/prefer-default-export": "off",
+        "react/prefer-stateless-function": "off",
+        "import/no-extraneous-dependencies": ["error",  {"devDependencies": true}],
+        "react/jsx-props-no-spreading": "off"
     },
     "settings": {
         "react": {

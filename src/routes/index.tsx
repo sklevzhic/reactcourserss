@@ -1,3 +1,4 @@
+import React from 'react';
 import { RouteObject } from 'react-router-dom';
 import MainPage from '../pages/main';
 import Header from '../components/header';

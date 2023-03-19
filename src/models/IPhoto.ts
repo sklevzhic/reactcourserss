@@ -4,4 +4,7 @@ export interface IPhoto {
   title: string;
   url: string;
   thumbnailUrl: string;
+  views: number;
+  likes: number;
+  comments: number;
 }
