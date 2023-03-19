@@ -10,6 +10,7 @@
     "test": "vitest run --coverage",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
+
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "eslint-config-airbnb-typescript": "^17.0.0",
