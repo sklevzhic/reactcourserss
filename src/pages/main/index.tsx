@@ -31,7 +31,7 @@ class MainPage extends React.Component<Record<string, never>, MainPageInterface>
   render() {
     const { value } = this.state;
     return (
-      <div className='container'>
+      <div className="container">
         <Header />
         <SearchBar value={value} handleValue={this.handleValue} />
         <CardList list={data} />

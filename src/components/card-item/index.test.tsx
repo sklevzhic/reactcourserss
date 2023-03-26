@@ -19,7 +19,7 @@ describe('card-item', () => {
 
     const wrapper = render(<CardItem item={item} />);
     expect(
-      wrapper.getByText('accusamus beatae ad facilis cum similique qui sunt'),
+      wrapper.getByText('accusamus beatae ad facilis cum similique qui sunt')
     ).toBeInTheDocument();
     expect(wrapper.getByText('Views: 75')).toBeInTheDocument();
     expect(wrapper.getByText('Likes: 5')).toBeInTheDocument();

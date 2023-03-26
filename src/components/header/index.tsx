@@ -7,7 +7,8 @@ class Header extends React.Component {
       <div>
         <Link to="/">Main</Link>
         <Link to="/about">About</Link>
-        <Link to="/sfdsf">ErrorPage</Link>
+        <Link to="/sfdsf">Error Page</Link>
+        <Link to="/form">Form Page</Link>
       </div>
     );
   }

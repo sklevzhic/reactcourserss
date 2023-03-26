@@ -2,6 +2,7 @@ import React from 'react';
 import { RouteObject } from 'react-router-dom';
 import MainPage from '../pages/main';
 import Header from '../components/header';
+import FormsPage from '../pages/form';
 
 export const routes: RouteObject[] = [
   {
@@ -16,6 +17,10 @@ export const routes: RouteObject[] = [
         about
       </div>
     ),
+  },
+  {
+    path: '/form',
+    element: <FormsPage />,
   },
   {
     path: '*',
