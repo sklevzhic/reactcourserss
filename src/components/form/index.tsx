@@ -108,12 +108,7 @@ class Form extends React.Component<ReportFormProps, ReportFormState> {
             <span>Title:</span>
             <input id="title" type="text" name="title" ref={this.titleRef} />
           </label>
-          {/* {!this.state.isFirstNameValid && ( */}
-          {/*   <p className={s.errorMessage}> */}
-          {/*     First name is required and should be at least 3 characters long and the first letter */}
-          {/*     should be in upper case */}
-          {/*   </p> */}
-          {/* )} */}
+          {!this.state.isTitleValid && <p> is not valid </p>}
           <hr />
 
 
@@ -121,11 +116,7 @@ class Form extends React.Component<ReportFormProps, ReportFormState> {
             <span>Date publish:</span>
             <input id="date" type="date" name="date" ref={this.dateRef} />
           </label>
-          {/* {!this.state.isDateValid && ( */}
-          {/*   <p className={s.errorMessage}> */}
-          {/*     The accident date is required and couldn&apos;t have happened in the future */}
-          {/*   </p> */}
-          {/* )} */}
+          {!this.state.isDateValid && <p> is not valid </p>}
           <hr />
 
           <label htmlFor="views">
@@ -137,9 +128,7 @@ class Form extends React.Component<ReportFormProps, ReportFormState> {
               <option value="30">30</option>
             </select>
           </label>
-          {/* {!this.state.isLocationValid && ( */}
-          {/*   <p className={s.errorMessage}>Please, choose the accident location</p> */}
-          {/* )} */}
+          {!this.state.isViewsValid && <p> is not valid </p>}
           <hr />
 
           <label htmlFor="isShowDescription">
@@ -169,9 +158,7 @@ class Form extends React.Component<ReportFormProps, ReportFormState> {
               ref={this.copyrightHolderRefNo}
             />
           </label>
-          {/* {!this.state.isInjuriesValid && ( */}
-          {/*   <p className={s.errorMessage}>Please, choose one of the options</p> */}
-          {/* )} */}
+          {!this.state.isCopyrightHolderValid && <p> is not valid </p>}
           <hr />
 
           <label htmlFor="evidence">
@@ -184,11 +171,7 @@ class Form extends React.Component<ReportFormProps, ReportFormState> {
               data-testid="file-input"
             />
           </label>
-          {/* {!this.state.isFileValid && ( */}
-          {/*   <p className={s.errorMessage}> */}
-          {/*     We only support files with jpeg, jpg, png, svg, gif, webp extensions */}
-          {/*   </p> */}
-          {/* )} */}
+          {!this.state.isImageValid && <p> is not valid </p>}
 
           <button type="submit">Submit</button>
         </form>
