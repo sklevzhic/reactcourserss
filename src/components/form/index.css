@@ -1,0 +1,18 @@
+.chat-input-wrapper {
+    background: #383838;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.chat-input-content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.chat-input-field {
+    padding: 10px;
+    flex-grow: 1;
+    border: 1px solid #696969;
+}
